@@ -5,6 +5,7 @@ static bool keys[1024];
 static bool resized;
 static GLuint width, height;
 int filtroEscolhido = 0;
+string foto;
 
 // Controle ds stickers que estarão na tela
 vector <Sprite*> stickers;
@@ -209,6 +210,23 @@ void SceneManager::resize(GLFWwindow* window, int w, int h) {
 	glViewport(0, 0, width, height);
 }
 
+string mudarFoto() {
+	ifstream txtfile;
+	string linha;
+	int cont = 0;
+
+	if (!txtfile.is_open())
+		txtfile.open("../foto/foto.txt");
+
+	while (!txtfile.eof()) {
+		getline(txtfile, linha);
+		break;
+	}
+
+	txtfile.close();
+	return linha;
+}
+
 void SceneManager::update() {
 	if (keys[GLFW_KEY_ESCAPE])
 		glfwSetWindowShouldClose(window, GL_TRUE);
@@ -227,6 +245,17 @@ void SceneManager::update() {
 	// Mover o sticker
 	if (moverSticker)
 		moveSticker(qualStickerMover);
+
+	// Mudar foto
+	string novaFoto = mudarFoto();
+	
+	if (foto != novaFoto) {
+		unsigned int texNovaID = loadTexture(novaFoto);
+		for (int i = 0; i < 8; i++) {
+			objects[i]->setTexture(texNovaID);
+		}
+		foto = novaFoto;
+	}
 }
 
 void SceneManager::render() {
@@ -268,7 +297,8 @@ void SceneManager::finish() {
 
 void SceneManager::setupScene() {
 	// Textura
-	unsigned int texID = loadTexture("../textures/lena.png");
+	foto = mudarFoto();
+	unsigned int texID = loadTexture(foto);
 
 	// Adicionando os botões de escolha dos filtros
 	Sprite* obj;
