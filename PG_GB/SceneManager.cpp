@@ -4,7 +4,7 @@
 static bool keys[1024];
 static bool resized;
 static GLuint width, height;
-static vector <int> posicaoHorizontalFiltros = {62, 174, 286, 398, 510, 622, 734};
+static vector <string> caminhoStrickes = { "../stickers/1.png", "../stickers/2.png", "../stickers/3.png", "../stickers/4.png", "../stickers/5.png" };
 int filtroEscolhido = 0;
 
 SceneManager::SceneManager(){}
@@ -150,6 +150,7 @@ void SceneManager::setupScene() {
 
 	// Adicionando os botões de escolha dos filtros
 	Sprite* obj;
+	static vector <int> posicaoHorizontalFiltros = { 62, 174, 286, 398, 510, 622, 734 };
 	int i;
 
 	for (i = 0; i < shaders.size(); i++) {
@@ -172,6 +173,22 @@ void SceneManager::setupScene() {
 
 	// Carregamento das texturas
 	objects[i]->setTexture(texID);
+
+
+	// Adicionando os stickers
+	static vector <int> posicaoHorizontalStickers = { 112, 254, 396, 538, 680 };
+
+	for (int j = 0; j < 5; j++) {
+		texID = loadTexture(caminhoStrickes[j]);
+
+		obj = new Sprite;
+		obj->setPosition(glm::vec3(posicaoHorizontalStickers[j], 548.0f, 0.0));
+		obj->setDimension(glm::vec3(60.0f, 60.0f, 1.0f));
+		obj->setShader(shaders[0]);
+		obj->setTexture(texID);
+
+		objects.push_back(obj);
+	}
 
 	// Definindo a janela do mundo (ortho2D)
 	ortho2D[0] = 0.0f;
