@@ -210,6 +210,8 @@ void SceneManager::resize(GLFWwindow* window, int w, int h) {
 	glViewport(0, 0, width, height);
 }
 
+
+// Pega o caminho da foto que será usada pelo programa
 string mudarFoto() {
 	ifstream txtfile;
 	string linha;
