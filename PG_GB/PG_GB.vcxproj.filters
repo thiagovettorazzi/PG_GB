@@ -18,32 +18,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\shaders\Filtro.vs">
-      <Filter>shaders</Filter>
-    </None>
-    <None Include="..\shaders\Filtro0.frag">
-      <Filter>shaders</Filter>
-    </None>
-    <None Include="..\shaders\Filtro1.frag">
-      <Filter>shaders</Filter>
-    </None>
-    <None Include="..\shaders\Filtro2.frag">
-      <Filter>shaders</Filter>
-    </None>
-    <None Include="..\shaders\Filtro3.frag">
-      <Filter>shaders</Filter>
-    </None>
-    <None Include="..\shaders\Filtro4.frag">
-      <Filter>shaders</Filter>
-    </None>
-    <None Include="..\shaders\Filtro5.frag">
-      <Filter>shaders</Filter>
-    </None>
-    <None Include="..\shaders\Filtro6.frag">
-      <Filter>shaders</Filter>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="glad.c">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
@@ -73,5 +47,31 @@
     <ClInclude Include="stb_image.h">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\shaders\Filtro.vs">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="..\shaders\Filtro0.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="..\shaders\Filtro1.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="..\shaders\Filtro2.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="..\shaders\Filtro3.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="..\shaders\Filtro4.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="..\shaders\Filtro5.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="..\shaders\Filtro6.frag">
+      <Filter>shaders</Filter>
+    </None>
   </ItemGroup>
 </Project>

@@ -10,8 +10,8 @@ uniform sampler2D ourTexture1;
 void main()
 {
     color = texture(ourTexture1, TexCoord);
-    
-    color.r += 0.90196078431;
-    color.g += 0.49411764705;
-    color.b += 0.13333333333;
+
+    color.r = color.b;
+    color.g = color.b;
+    color.b = color.b;
 }

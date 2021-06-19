@@ -68,25 +68,24 @@ void SceneManager::key_callback(GLFWwindow* window, int key, int scancode, int a
 void SceneManager::mouse_callback(GLFWwindow* window, int button, int action, int mods) {
 	if (button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS) {
 		double xpos, ypos;
-		
+
 		glfwGetCursorPos(window, &xpos, &ypos);
 
 		// Área dos filtros
 		if (488 < ypos && ypos < 588) {
-			// Filtro 1
-			if (12 < xpos && xpos < 112)
+			if (12 < xpos && xpos < 112) // Filtro 1
 				filtroEscolhido = 0;
-			else if (124 < xpos && xpos < 224)
+			else if (124 < xpos && xpos < 224) // Filtro 2
 				filtroEscolhido = 1;
-			else if (236 < xpos && xpos < 336)
+			else if (236 < xpos && xpos < 336) // Filtro 3
 				filtroEscolhido = 2;
-			else if (348 < xpos && xpos < 448)
+			else if (348 < xpos && xpos < 448) // Filtro 4
 				filtroEscolhido = 3;
-			else if (460 < xpos && xpos < 560)
+			else if (460 < xpos && xpos < 560) // Filtro 5
 				filtroEscolhido = 4;
-			else if (572 < xpos && xpos < 672)
+			else if (572 < xpos && xpos < 672) // Filtro 6
 				filtroEscolhido = 5;
-			else if (684 < xpos && xpos < 784)
+			else if (684 < xpos && xpos < 784) // Filtro 7
 				filtroEscolhido = 6;
 		}
 	}

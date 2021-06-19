@@ -10,8 +10,10 @@ uniform sampler2D ourTexture1;
 void main()
 {
     color = texture(ourTexture1, TexCoord);
+
+    float media = (color.r + color.g + color.b) / 3;
     
-    color.r += 1.0;
-    color.g += 0.0;
-    color.b += 0.0;
+    color.r = media;
+    color.g = media;
+    color.b = media;
 }

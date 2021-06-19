@@ -142,16 +142,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <None Include="..\shaders\Filtro.vs" />
-    <None Include="..\shaders\Filtro0.frag" />
-    <None Include="..\shaders\Filtro1.frag" />
-    <None Include="..\shaders\Filtro2.frag" />
-    <None Include="..\shaders\Filtro3.frag" />
-    <None Include="..\shaders\Filtro4.frag" />
-    <None Include="..\shaders\Filtro5.frag" />
-    <None Include="..\shaders\Filtro6.frag" />
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="glad.c" />
     <ClCompile Include="Origem.cpp" />
     <ClCompile Include="SceneManager.cpp" />
@@ -163,6 +153,16 @@
     <ClInclude Include="Shader.h" />
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="stb_image.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\shaders\Filtro.vs" />
+    <None Include="..\shaders\Filtro0.frag" />
+    <None Include="..\shaders\Filtro1.frag" />
+    <None Include="..\shaders\Filtro2.frag" />
+    <None Include="..\shaders\Filtro3.frag" />
+    <None Include="..\shaders\Filtro4.frag" />
+    <None Include="..\shaders\Filtro5.frag" />
+    <None Include="..\shaders\Filtro6.frag" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
