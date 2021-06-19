@@ -24,7 +24,8 @@ public:
 	void setPosition(glm::vec3 pos) { this->pos = pos; } //dica: fazer setX e setY individualmente
 	void setDimension(glm::vec3 scale) { this->scale = scale; }
 	void setAngle(float angle) { this->angle = angle; } //para 3D precisa angulo por eixo ou quaternion
-	
+
+	glm::vec3 getPosition();
 
 	//Para controle direto da matriz de transformações
 	void setRotation(float angle, glm::vec3 axis, bool reset = true);

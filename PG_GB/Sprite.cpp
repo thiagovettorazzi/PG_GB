@@ -52,6 +52,10 @@ void Sprite::initialize()
 	angle = 0.0f;
 }
 
+glm::vec3 Sprite::getPosition() {
+	return this->pos;
+}
+
 void Sprite::setTexture(int texID)
 {
 	this->texID = texID;
@@ -65,6 +69,7 @@ void Sprite::setRotation(float angle, glm::vec3 axis, bool reset)
 
 void Sprite::setTranslation(glm::vec3 displacements, bool reset)
 {
+	pos = displacements;
 	if (reset) transform = glm::mat4(1);
 	transform = glm::translate(transform, displacements);
 }

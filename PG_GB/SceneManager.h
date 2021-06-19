@@ -39,9 +39,14 @@ public:
 	//Métodos para configuração e carregamento dos elementos da cena
 	void initializeGraphics();
 	void addShader(string vFilename, string fFilename);
-	void setupScene(); //antigo setupGeometry
+	void setupScene();
 	void setupCamera2D();
 	unsigned int loadTexture(string filename); 
+
+	// Métodos dos stickers
+	void addSticker(int qualStickerAdicionar);
+	void removeSticker();
+	void moveSticker(int qualStickerMover);
 
 private:
 	GLFWwindow *window;
